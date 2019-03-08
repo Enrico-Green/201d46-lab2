@@ -1,21 +1,32 @@
+
 'use strict';
 
-//a guessimg game with yes/no answers. user input must accept either yes or no
-    //must accomadate users using all caps or just Y/N
-    //use descriptive console.log messages for each question
+//a guessimg game about me with 5 yes/no answers. user input must accept either yes or no
+//must accomadate users using all caps or just Y/N
 
-//five questions are: 
-//1>Did I serve in the military?  2>Am I older than 30?  3>Do i like dogs?  4>Do I like Cats?  5>Do I like Trump? 
+//the sixth question is a guessing game where the user has 4 tries to guess a numeric value;
+//each attempts tells the user if they are too high ot too high
+
+//the seventh question mutiple correct answers stored in an array with 6 tries.
+
+//app utilizes descriptive console.log messages for each question
+
 
 var militaryServiceY
 var olderThanThirtyY
 var likeDogsY
 var likeCatsN
 var likeTrumpN
+var numberOfKids
 
-//must accomodate users entering all caps or just Y/N
- //use descriptive console.log messages for each question
 
+/* 5 yes/no questions are: 
+1>Did I serve in the military?  
+2>Am I older than 30?  
+3>Do i like dogs?  
+4>Do I like Cats?  
+5>Do I like Trump? 
+*/
 
 var militaryServiceY = prompt('Did I serve in the military?');
     militaryServiceY = militaryServiceY.toUpperCase()
@@ -27,7 +38,6 @@ var militaryServiceY = prompt('Did I serve in the military?');
         alert('Follow directions and only answer YES or NO please! ');
     }
 console.log ( 'guess for my military service was ' + militaryServiceY);
-
 
  
 var olderThanThirtyY= prompt('Am I over the age of 30?');
@@ -41,6 +51,7 @@ var olderThanThirtyY= prompt('Am I over the age of 30?');
     }
 console.log ( 'guess for if I am over 30 was ' + olderThanThirtyY);
 
+
 var likeDogsY = prompt('Do like dogs as pets?');
     likeDogsY = likeDogsY.toUpperCase()
     if (likeDogsY=== 'N' || likeDogsY === 'NO' ) {
@@ -51,6 +62,7 @@ var likeDogsY = prompt('Do like dogs as pets?');
         alert('Follow directions and only answer YES or NO please!');
     }
 console.log ( 'guess for if I like dogs was ' + likeDogsY);
+
 
 var likeCatsN = prompt('Did I like cats as pets?');
     likeCatsN = likeCatsN.toUpperCase()
@@ -63,6 +75,7 @@ var likeCatsN = prompt('Did I like cats as pets?');
     }
 console.log ( 'guess for if I like cats is ' + militaryServiceY);
 
+
 var likeTrumpN = prompt('Do I like Donald Trump as president?');
     likeCatsN = likeCatsN.toUpperCase()
     if (likeCatsN === 'N' || likeCatsN === 'NO' ) {
@@ -73,3 +86,45 @@ var likeTrumpN = prompt('Do I like Donald Trump as president?');
         alert('Follow directions and only answer YES or NO please!');
     }
 console.log ( 'guess for if I like trump is ' + militaryServiceY);
+
+// the sixth question is tell me how many kids do I have?
+
+var numberOfKids = prompt('Guess how many kids I have?');
+    numberOfKids = numberofKids.toUpperCase()
+    if (numberOfKids === '2' || numberofKids === 'TWO' ) {
+        alert('Your guess was correct!');
+    } else if (numberOfKids == 'Y' || numberOfKids === 'YES') {
+        alert('Your guess was YES. That is correct. I am a U.S Marine SEMPER FI!');
+    }   else {
+        alert('Follow directions and only answer YES or NO please! ');
+    }
+console.log ( 'guess for my military service was ' + militaryServiceY);
+
+
+
+/* the seventh question is name a country other than America I have visited
+correct answers: Japan, Iraq, Afghanistan, Germany, Mexico, Kyrgyzstan, 
+South Korea, Kuwait, Quatar; will be stored in  var nationsVisited
+*/ 
+
+/*compare users input to  items in array Japan, Iraq, Afghanistan, Germany, Mexico, Kyrgyzstan, 
+//South Korea, Kuwait, Quatar; using a for statement to write properties to the prompt. i 
+use an if /else statement to loop the question.
+*/
+     //creating the array nations
+     var nations = ['JAPAN', 'IRAQ', 'AFGHANISTAN', 'GERMANY', 'MEXICO', 'KYRGYSTAN', 'SOUTH KOREA','KUWAIT', 'QUATAR'];
+     //compare the user input stored in nationVisited to the vales in the array nations
+     
+     for (var i = 0; i < 6; i++){ 
+            var nationsVisited = prompt('Guess the name of one country I have visited');
+            nationsVisited = nationsVisited.toUpperCase()
+     }
+      if (nations.includes(nationsVisited)) {
+          alert('That was a VERY VERY lucky guess; Good job!');
+      } else if (nationsVisited)
+          alert('NO TRY AGAIN!')
+      
+      }
+                break;
+
+            }
