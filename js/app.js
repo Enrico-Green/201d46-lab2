@@ -90,8 +90,13 @@ console.log ( 'guess for if I like trump is ' + militaryServiceY);
 // the sixth question is tell me how many kids do I have?
 
 var numberOfKids = prompt('Guess how many kids I have?');
+<<<<<<< HEAD
     numberOfKids = numberOfKids.toUpperCase();
     if (numberOfKids === '2' || numberOfKids === 'TWO' ) {
+=======
+    numberOfKids = numberofKids.toUpperCase()
+    if (numberOfKids === '2' || numberofKids === 'TWO' ) {
+>>>>>>> 733a6a4ca8fd07e5f4953e2ef0f3358d2b2eba33
         alert('Your guess was correct!');
     } else if (numberOfKids == 'Y' || numberOfKids === 'YES') {
         alert('Your guess was YES. That is correct. I am a U.S Marine SEMPER FI!');
@@ -117,6 +122,7 @@ use an if /else statement to loop the question.
      
      for (var i = 0; i < 6; i++){ 
             var nationsVisited = prompt('Guess the name of one country I have visited');
+<<<<<<< HEAD
             nationsVisited = nationsVisited.toUpperCase();
       if (nations.includes(nationsVisited)) {
           alert('That was a VERY VERY lucky guess; Good job!');
@@ -125,3 +131,16 @@ use an if /else statement to loop the question.
           alert('NO TRY AGAIN!');
       }
     };
+=======
+            nationsVisited = nationsVisited.toUpperCase()
+     }
+      if (nations.includes(nationsVisited)) {
+          alert('That was a VERY VERY lucky guess; Good job!');
+      } else if (nationsVisited)
+          alert('NO TRY AGAIN!')
+      
+      }
+                break;
+
+            }
+>>>>>>> 733a6a4ca8fd07e5f4953e2ef0f3358d2b2eba33
